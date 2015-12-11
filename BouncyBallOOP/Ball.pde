@@ -27,7 +27,7 @@ class Ball {
     noStroke();
     ellipse(loc.x, loc.y, diam, diam);
   }
-  
+
   void move() {
     loc.add(vel);
   }
