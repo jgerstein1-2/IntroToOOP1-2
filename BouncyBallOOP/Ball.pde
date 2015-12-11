@@ -27,7 +27,7 @@ class Ball {
     noStroke();
     ellipse(loc.x, loc.y, diam, diam);
   }
-
+  
   void move() {
     loc.add(vel);
   }
@@ -38,6 +38,18 @@ class Ball {
     }
     if (loc.y > height || loc.y < 0) {
       vel.y *= -1;
+    }
+  }
+  void wrap() {
+    if (loc.x > width) {
+      loc.x = 0;
+    } else if (loc.x < 0) {
+      loc.x = width;
+    }
+    if (loc.y > height) {
+      loc.y = 0;
+    } else if (loc.y < 0) {
+      loc.y = height;
     }
   }
 }

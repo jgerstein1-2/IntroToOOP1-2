@@ -11,8 +11,6 @@ void draw() {
   background(0);
   b.move();
   c.move();
-  b.bounce();
-  c.bounce();
   b.display();         //call b's display() method
   c.display();
 }
